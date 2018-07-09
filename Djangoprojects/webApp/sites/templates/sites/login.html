@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<h3>Inside sites login page</h3>
+
+{% if msg %}
+<h3> {{msg}}</h3>
+{% endif %}
+
+
+<form action="" method="post" novalidate>{% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-success" value="Signin">
+</form>
+{% endblock %}
+
+

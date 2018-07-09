@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3>My company</h3>
+<h2>{{name}}</h2>
+<h2>{{email}}</h2>
+<h2>{{list1.2}}</h2>
+<h2>{{dict2.city}}</h2>
+{%for i in list1 %}
+        <h3>{{i}}</h3>
+{% endfor %}
+
+{% if name == ''%}
+    <h3>Empty...</h3>
+{% else %}
+    <h2>Name:{{name}}</h2>
+{% endif %}
+
+{% endblock %}
+

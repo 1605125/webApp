@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<h3>Inside sites dashboard page</h3>
+
+{% if request.user.username %}
+    <h3>
+        Welcome:{{ request.user.username }}
+    </h3>
+    <h3>
+        <a href="/sites/logout">Logout({{ request.user.username }})</a>
+    </h3>
+{% else %}
+<h3>
+    <a href="/sites/signin">Login here</a>
+</h3>
+
+
+{% endif %}
+
+{% endblock %}
+
+
